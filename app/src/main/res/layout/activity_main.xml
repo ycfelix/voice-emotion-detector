@@ -5,42 +5,46 @@ android:layout_height="match_parent" tools:context=".MainActivity"
 android:orientation="horizontal" android:keepScreenOn="true"
 android:background="@mipmap/w640">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true">
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Image analysis"
-        android:id="@+id/imageDetectionOptionButton"
-        android:textColor="@android:color/black"
-        android:textSize="16dp"
-        android:focusableInTouchMode="true"
-        android:background = "@drawable/round"
-        android:layout_below="@+id/realTimeDetectionOptionButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/realTimeDetectionOptionButton"
-        android:text="cameraFEED"
-        android:textSize="16dp"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="105dp"
-        android:focusableInTouchMode="true"
-        android:background = "@drawable/round"
-        android:elevation="@android:dimen/thumbnail_height"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/imageDetectionOptionButton"
-        android:layout_alignStart="@+id/imageDetectionOptionButton" />
-</RelativeLayout>
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+
+
+        <Button
+            android:id="@+id/imageDetectionOptionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/realTimeDetectionOptionButton"
+            android:layout_marginTop="142dp"
+            android:background="@drawable/round"
+            android:focusableInTouchMode="true"
+            android:text="Image analysis"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/realTimeDetectionOptionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageDetectionOptionButton"
+            android:layout_alignLeft="@+id/imageDetectionOptionButton"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="95dp"
+            android:background="@drawable/round"
+            android:elevation="@android:dimen/thumbnail_height"
+            android:focusableInTouchMode="true"
+            android:text="cameraFEED"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
