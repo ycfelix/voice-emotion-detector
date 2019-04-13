@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
+        multiDexEnabled true
         applicationId "freeriders.emotionrecognizer"
         minSdkVersion 19
         targetSdkVersion 28
@@ -15,6 +16,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
     }
 }
 
@@ -29,4 +33,5 @@ dependencies {
     implementation 'com.google.android.gms:play-services:11.2.0'
     implementation 'com.affectiva.android:affdexsdk:3.2'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
 }
