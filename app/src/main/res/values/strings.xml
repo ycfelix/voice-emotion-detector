@@ -1,18 +1,4 @@
 <resources>
-    <string name="subscription_key">f71a6e676a404c8f94a062f68c898493</string>
-    //Key 2: 5322160c272f4b868575464adb4d6685
-    <string name="faceSubscription_key">5322160c272f4b868575464adb4d6685</string>
-
-    <string name="app_name">EmotionRecognizer</string>
+    <string name="app_name">emotionrecognizer</string>
     <string name="action_settings">Settings</string>
-    <string name="add_subscription_key_tip_title">Subscription Key is Needed</string>
-    <string name="add_subscription_key_tip">Please put your two subscription keys for Emotion API/Face API to source file \"app/res/values/strings.xml\" to enable Emotion API and Face API calls.</string>
-    <string name="title_activity_analyze">AnalyzeActivity</string>
-    <string name="title_activity_recognize">RecognizeActivity</string>
-    <string name="title_activity_thumbnail">ThumbnailActivity</string>
-
-    <!-- Select image activity -->
-    <string name="select_an_image">Select an Image</string>
-    <string name="take_photo">Take a Photo</string>
-    <string name="select_image_in_album">From Gallery</string>
 </resources>
