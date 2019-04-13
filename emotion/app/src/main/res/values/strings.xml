@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">讀心樂比</string>
+
+    <string name="SL_mode">SL</string>
+    <string name="SVM_mode">SVM</string>
+    <string name="btn_sound">錄音</string>
+    <string name="btn_clear">清除</string>
+    <string name="sw_change">切換</string>
+
+    <string name="start_talk">請按「錄音」開始說話</string>
+    <string name="tv_empty">尚未偵測到情緒</string>
+    <string name="tv_line_pic">LINE貼圖：樂比與皮爾 (作者：Yoyu)</string>
+    <string name="again_leave">再按一次「上一頁」離開本APP</string>
+    <string name="please_speak">請說話......</string>
+    
+    <string-array name="emotions">
+        <item>中性</item>
+        <item>安心</item>
+        <item>喜悅</item>
+        <item>滿意</item>
+        <item>無愧</item>
+        <item>無恥</item>
+        <item>不安</item>
+        <item>不滿</item>
+        <item>煩惱</item>
+        <item>憂愁</item>
+        <item>悲哀</item>
+        <item>害怕</item>
+        <item>驚奇</item>
+        <item>著急</item>
+        <item>生氣</item>
+    </string-array>
+
+</resources>
