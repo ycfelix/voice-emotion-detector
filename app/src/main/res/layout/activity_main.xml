@@ -165,7 +165,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="application by freerider@hackust"
+            android:text="freely modify this program"
             android:layout_gravity="center" />
 
         <EditText
