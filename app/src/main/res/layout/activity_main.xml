@@ -1,50 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-android:layout_height="match_parent" tools:context=".MainActivity"
-android:orientation="horizontal" android:keepScreenOn="true"
-android:background="@mipmap/w640">
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <RelativeLayout
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-        <Button
-            android:id="@+id/imageDetectionOptionButton"
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Voice Emotion Detector"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textViewNeutrality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/realTimeDetectionOptionButton"
-            android:layout_marginTop="142dp"
-            android:background="@drawable/round"
-            android:focusableInTouchMode="true"
-            android:text="Image analysis"
-            android:textColor="@android:color/black"
-            android:textSize="16dp" />
+            android:text="Neutral:" />
 
-        <Button
-            android:id="@+id/realTimeDetectionOptionButton"
+        <ProgressBar
+            android:id="@+id/progressBarNeutrality"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textViewHappiness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/imageDetectionOptionButton"
-            android:layout_alignLeft="@+id/imageDetectionOptionButton"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="148dp"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="95dp"
-            android:background="@drawable/round"
-            android:elevation="@android:dimen/thumbnail_height"
-            android:focusableInTouchMode="true"
-            android:text="cameraFEED"
-            android:textColor="@android:color/black"
-            android:textSize="16dp" />
-    </RelativeLayout>
+            android:text="Happiness:" />
+
+        <ProgressBar
+            android:id="@+id/progressBarHappiness"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textViewSadness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sadness:" />
+
+        <ProgressBar
+            android:id="@+id/progressBarSadness"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textViewAnger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anger:" />
+
+        <ProgressBar
+            android:id="@+id/progressBarAnger"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/textViewFear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fear:" />
+
+        <ProgressBar
+            android:id="@+id/progressBarFear"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+        <TextView
+            android:id="@+id/actionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Press below button to start listening"
+            android:textAlignment="center" />
+
+        <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@drawable/record_voice" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/textinputer"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            app:backgroundTint="@color/colorPrimary"
+            app:srcCompat="@android:drawable/btn_default" />
+
+        <TextView
+            android:id="@+id/speechresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text=" "
+            android:textAlignment="center" />
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/sentimentresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Sentiment level@google NLP"
+            android:textAlignment="center" />
+
+        <ProgressBar
+            android:id="@+id/sentiment"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="application by freerider@hackust"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/textinput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Input your emotional text..."
+            android:layout_gravity="center" />
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
